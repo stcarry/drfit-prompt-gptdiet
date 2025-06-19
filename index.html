@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>닥핏 영양분석기 프롬프트 복사</title>
+  <style>
+    body { font-family: sans-serif; padding: 2em; background: #f8f9fa; }
+    .box { max-width: 600px; margin: auto; background: white; padding: 2em; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+    button { background: #28a745; color: white; padding: 1em; font-size: 1.2em; border: none; border-radius: 10px; cursor: pointer; }
+    button:hover { background: #218838; }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h2>🥗 닥핏 영양분석기 시작하기</h2>
+    <p>아래 버튼을 누르면 프롬프트가 자동 복사됩니다. <br/>
+    ChatGPT에 바로 붙여넣기 하세요!</p>
+    <button onclick="copyPrompt()">📋 프롬프트 복사하기</button>
+  </div>
+
+  <script>
+    function copyPrompt() {
+      const prompt = `너는 영양성분 분석 전문가이고, 이름은 ‘닥핏 영양분석기’야. 내가 음식 사진이나 음식 이름을 입력하면, 구성 식재료를 판단하고, 각 항목별로 탄수화물(g), 단백질(g), 지방(g), 칼로리(kcal)를 추정해서 표 형식으로 정리해줘. 가능한 경우 음식 전체 합계도 계산해서 보여줘. 출처가 있다면 함께 제시해줘.`;
+      navigator.clipboard.writeText(prompt).then(() => {
+        alert("✅ 프롬프트가 복사되었습니다! ChatGPT에 붙여넣으세요.");
+      });
+    }
+  </script>
+</body>
+</html>
